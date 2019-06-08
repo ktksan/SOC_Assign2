@@ -1,0 +1,88 @@
+<html>
+    <head>
+        
+    <script>
+    //    var j=0;
+        function search()
+        {
+            var arr = document.getElementById("table");
+            
+            for(var i=1;i<=5;i++)
+            {
+                if(!((arr.rows[i].cells[0].innerHTML).toLowerCase()).includes((document.getElementById("find").value).toLowerCase()))
+                {   
+                    (arr.rows[i]).id="hiddenrow";
+                }
+                else
+                {
+                    arr.rows[i].id = "row";
+                }
+            }
+        }
+    </script>
+    <style> 
+    table
+    {
+        margin:auto;
+        width:60%;
+        background-color:crimson;
+    }
+
+    tr:hover
+    {
+        background-color:darkred;
+    }
+    #hiddenrow
+    {
+        display:none;
+    }
+    </style>
+    </head>
+    
+    
+    
+    
+    <body>
+    Find <input type="text" id="find">
+
+    <input type="button" onclick="search()" value="Go" >
+    <!---<p id="search"> Name </p>     -->
+    <table border=20 id="table" cellspacing=4 cellpadding = 25 >
+            
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>TEAM</th>
+            </tr>
+            <tr class="row" id="row">
+                <td id="name">Gareth Bale</td>
+                <td>29</td>
+                <td>Real Madrid</td>
+            </tr>
+            <tr class="row" id="row">
+                <td id="name">Neymar</td>
+                <td>27</td>
+                <td>PSG</td>
+            </tr>
+            <tr class="row" id="row">
+                <td id="name">Lukaku</td>
+                <td>26</td>
+                <td>Manchester United</td>
+            </tr>
+            <tr class="row" id="row">
+                <td id="name">Eden Hazard</td>
+                <td>28</td>
+                <td>Chelsea</td>
+            </tr>
+            <tr class="row" id="row">
+                <td id="name">Mbappe </td>
+                <td>20</td>
+                <td>PSG</td>
+            </tr>
+
+    </table>
+
+
+     </body>
+
+</html>
